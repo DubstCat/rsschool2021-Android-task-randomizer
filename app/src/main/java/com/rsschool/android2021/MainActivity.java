@@ -1,7 +1,6 @@
 package com.rsschool.android2021;
 
 import android.os.Bundle;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,7 +20,6 @@ public class MainActivity extends AppCompatActivity implements FirstFragment.Dat
         final Fragment firstFragment = FirstFragment.newInstance(previousNumber);
         final FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.container, firstFragment).commit();
-        // TODO: invoke function which apply changes of the transaction
     }
 
     private void openSecondFragment(int min, int max) {

@@ -40,9 +40,7 @@ class SecondFragment : Fragment() {
         result?.text = generate(min, max).toString()
 
         backButton?.setOnClickListener {
-            // TODO: implement back
             listener?.onSecondFragmentDataPassed(result?.text.toString().toInt())
-
         }
     }
 
@@ -56,11 +54,9 @@ class SecondFragment : Fragment() {
         fun newInstance(min: Int, max: Int): SecondFragment {
             val fragment = SecondFragment()
             val args = Bundle()
-
             args.putInt(SecondFragment.MIN_VALUE_KEY, min)
             args.putInt(SecondFragment.MAX_VALUE_KEY, max)
             fragment.arguments = args
-
             return fragment
         }
 
